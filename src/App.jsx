@@ -4,7 +4,10 @@ import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Parceiros from 'material-ui/svg-icons/social/people';
 import Home from 'material-ui/svg-icons/action/home'
+import Notificacao from 'material-ui/svg-icons/social/notifications';
+import Dehaze from 'material-ui/svg-icons/image/dehaze';
 import MenuItem from 'material-ui/MenuItem';
+import Divider from 'material-ui/Divider';
 import Drawer from 'material-ui/Drawer';
 import AppBar from 'material-ui/AppBar';
 
@@ -38,9 +41,11 @@ class App extends Component {
           style={AppBarStyle}
           onLeftIconButtonTouchTap={this.handleToggle}/>
           <Drawer open={this.state.open}>
+            <MenuItem primaryText="Ações" onTouchTap={this.handleToggle} leftIcon={<Dehaze/>}/>
+            <Divider />
             <MenuItem primaryText="Home" leftIcon={<Home/>}/>
             <MenuItem primaryText="Parceiros" leftIcon={<Parceiros />}/>
-            <MenuItem primaryText="Noticias"/>
+            <MenuItem primaryText="Noticias"leftIcon={<Notificacao />}/>
           </Drawer>
         </div>
       </MuiThemeProvider>
