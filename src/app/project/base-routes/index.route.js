@@ -14,7 +14,7 @@
         abstract: true
       })
 
-      
+
       .state('app.sidebarTheme', {
         url:"t",
         views: {
@@ -38,7 +38,7 @@
         }
       });
 
-    $urlRouterProvider.otherwise('/alsllaslsa');
+    $urlRouterProvider.otherwise('/t/home');
   }
 
 })();
