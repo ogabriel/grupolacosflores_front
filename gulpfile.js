@@ -1,7 +1,7 @@
 
 
 var options = {
-  mainAngularModule: 'testelacosfloresFront'
+  mainAngularModule: 'grupoLacosFloresFront'
 };
 
 
