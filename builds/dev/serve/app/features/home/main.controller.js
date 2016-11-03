@@ -3,10 +3,10 @@
 
   angular
     .module('grupoLacosFloresFront')
-    .controller('MainController', MainController);
+    .controller('HomeController', HomeController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr) {
+  function HomeController($timeout, webDevTec, toastr) {
     var vm = this;
 
     vm.awesomeThings = [];
