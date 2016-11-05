@@ -57,7 +57,27 @@
             controller: ''
           }
         }
+      })
+
+      .state('app.noticias',{
+        url: 'noticias',
+        views: {
+          'content':{
+            templateUrl:'app/features/noticias/main.html',
+            controller: ''
+          }
+        }
       });
+
+     /* .state('app.parceiros.cadastro',{
+        url: 'cadastro_parceiro',
+        views: {
+          'content':{
+            templateUrl: 'app/features/parceiros/main_parceiros.html',
+            controller: ''
+          }
+        }
+      });*/
 
     $urlRouterProvider.otherwise('/home');
   }

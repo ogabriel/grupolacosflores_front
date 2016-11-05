@@ -1,3 +1,4 @@
+
 angular.module('grupoLacosFloresFront').controller('PedidosController', function($scope, PedidosService){
   var ctrl = this;
 
@@ -34,4 +35,5 @@ angular.module('grupoLacosFloresFront').controller('PedidosController', function
 
 
 })
+
 
