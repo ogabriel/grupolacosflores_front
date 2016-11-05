@@ -29,7 +29,7 @@ angular.module('grupoLacosFloresFront').controller('PedidosController', function
       })
     }
 
-
+    
 
   }
 
