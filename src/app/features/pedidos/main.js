@@ -1,3 +1,3 @@
 angular.module('grupoLacosFloresFront').controller('PedidosController', function($scope){
-  $scope.testaMensagem = 'eita';
-})
+  $scope.testaMensagem = 'eita XD';
+});

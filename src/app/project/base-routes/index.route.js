@@ -46,6 +46,16 @@
             controller: 'PedidosController'
           }
         }
+      })
+
+      .state('app.parceiros',{
+        url: 'parceiros',
+        views: {
+          'content':{
+            templateUrl: 'app/features/parceiros/main.html',
+            controller: ''
+          }
+        }
       });
 
     $urlRouterProvider.otherwise('/home');
