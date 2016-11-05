@@ -56,6 +56,16 @@
             controller: ''
           }
         }
+      })
+
+      .state('app.noticias',{
+        url: 'noticias',
+        views: {
+          'content':{
+            templateUrl:'app/features/noticias/main.html',
+            controller: ''
+          }
+        }
       });
 
      /* .state('app.parceiros.cadastro',{
