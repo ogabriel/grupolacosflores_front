@@ -4,7 +4,6 @@
 
   angular
     .module('grupoLacosFloresFront')
-    .constant('malarkey', malarkey)
     .constant('moment', moment);
 
 })();

@@ -32,7 +32,7 @@
         views: {
           'content': {
             templateUrl: 'app/features/home/main.html',
-            controller: 'MainController',
+            controller: 'HomeController',
             controllerAs: 'main'
           }
         }
@@ -43,7 +43,8 @@
         views: {
           'content': {
             templateUrl: 'app/features/pedidos/main.html',
-            controller: 'PedidosController'
+            controller: 'PedidosController',
+            controllerAs: 'pedido'
           }
         }
       })
