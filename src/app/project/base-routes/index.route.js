@@ -10,35 +10,45 @@
     $stateProvider
       .state('app', {
         url: '/',
-        template: '<div ui-view></div>',
+        templateUrl: 'app/project/base-routes/layout.html',
         abstract: true
       })
 
 
-      .state('app.sidebarTheme', {
-        url:"t",
-        views: {
-          '@app':{
-            templateUrl : "app/project/base-routes/layout.html"
-          },
-          'topnav@app.sidebarTheme':{
-            template: '<acme-navbar></acme-navbar>'
-          }
-        }
-      })
+      // .state('app.sidebarTheme', {
+      //   url:"",
+      //   views: {
+      //     '@content':{
+      //       templateUrl : "app/project/base-routes/layout.html"
+      //     },
+      //     'topnav@app.sidebarTheme':{
+      //       template: '<acme-navbar></acme-navbar>'
+      //     }
+      //   }
+      // })
 
-      .state('app.sidebarTheme.home', {
-        url: '/home',
+      .state('app.home', {
+        url: 'home',
         views: {
-          'main@app.sidebarTheme': {
+          'content': {
             templateUrl: 'app/features/home/main.html',
             controller: 'MainController',
             controllerAs: 'main'
           }
         }
+      })
+
+      .state('app.pedidos', {
+        url: 'pedidos',
+        views: {
+          'content': {
+            templateUrl: 'app/features/pedidos/main.html',
+            controller: 'PedidosController'
+          }
+        }
       });
 
-    $urlRouterProvider.otherwise('/t/home');
+    $urlRouterProvider.otherwise('/home');
   }
 
 })();
