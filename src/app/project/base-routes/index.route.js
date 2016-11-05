@@ -58,6 +58,16 @@
         }
       });
 
+     /* .state('app.parceiros.cadastro',{
+        url: 'cadastro_parceiro',
+        views: {
+          'content':{
+            templateUrl: 'app/features/parceiros/main_parceiros.html',
+            controller: ''
+          }
+        }
+      });*/
+
     $urlRouterProvider.otherwise('/home');
   }
 
