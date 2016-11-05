@@ -7,7 +7,7 @@ semantic.json
 .idea/
 .tmp/
 dist/
-builds/
+./builds/
 tests/
 .DS_Store
 .npm-debug.log
