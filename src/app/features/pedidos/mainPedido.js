@@ -12,7 +12,7 @@ angular.module('grupoLacosFloresFront').controller('PedidosController', function
   })
   .catch(function(){
     console.log('falhou');
-  })
+  });
 
   return this;
 })
@@ -26,14 +26,9 @@ angular.module('grupoLacosFloresFront').controller('PedidosController', function
         data: {
           xpto: 'eitaa'
         }
-      })
+      });
     }
-
-    
-
-  }
-
-
-})
+  };
+});
 
 

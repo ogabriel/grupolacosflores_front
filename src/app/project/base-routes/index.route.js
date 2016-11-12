@@ -9,40 +9,27 @@
   function routerConfig($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('app', {
-        url: '/',
+        url: '',
         templateUrl: 'app/project/base-routes/layout.html',
         abstract: true
       })
 
-
-      // .state('app.sidebarTheme', {
-      //   url:"",
-      //   views: {
-      //     '@content':{
-      //       templateUrl : "app/project/base-routes/layout.html"
-      //     },
-      //     'topnav@app.sidebarTheme':{
-      //       template: '<acme-navbar></acme-navbar>'
-      //     }
-      //   }
-      // })
-
       .state('app.home', {
-        url: 'home',
+        url: '/home',
         views: {
           'content': {
-            templateUrl: 'app/features/home/main.html',
+            templateUrl: 'app/features/home/mainHome.html',
             controller: 'HomeController',
-            controllerAs: 'main'
+            controllerAs: 'home'
           }
         }
       })
 
       .state('app.pedidos', {
-        url: 'pedidos',
+        url: '/pedidos',
         views: {
           'content': {
-            templateUrl: 'app/features/pedidos/main.html',
+            templateUrl: 'app/features/pedidos/mainPedido.html',
             controller: 'PedidosController',
             controllerAs: 'pedido'
           }
@@ -50,34 +37,35 @@
       })
 
       .state('app.parceiros',{
-        url: 'parceiros',
+        url: '/parceiros',
         views: {
           'content':{
-            templateUrl: 'app/features/parceiros/main.html',
+            template: '<div ui-view>',
             controller: ''
           }
-        }
+        },
+        abstract: true
+      })
+
+      .state('app.parceiros.lista', {
+        url: '',
+        templateUrl: 'app/features/parceiros/mainParceiro.html'
+      })
+
+      .state('app.parceiros.cadastro', {
+        url: '/cadastro',
+        templateUrl: 'app/features/parceiros/cadastroParceiro.html'
       })
 
       .state('app.noticias',{
-        url: 'noticias',
+        url: '/noticias',
         views: {
           'content':{
-            templateUrl:'app/features/noticias/main.html',
+            templateUrl:'app/features/noticias/mainNoticias.html',
             controller: ''
           }
         }
       });
-
-     /* .state('app.parceiros.cadastro',{
-        url: 'cadastro_parceiro',
-        views: {
-          'content':{
-            templateUrl: 'app/features/parceiros/main_parceiros.html',
-            controller: ''
-          }
-        }
-      });*/
 
     $urlRouterProvider.otherwise('/home');
   }

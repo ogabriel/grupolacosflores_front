@@ -102,9 +102,6 @@
                             <a href="#"><i class="fa fa-fw fa-gear"></i> Configurações</a>
                         </li>
                         <li class="divider"></li>
-                        <!-- <li>
-                            <a href="#"><i class="fa fa-fw fa-power-off"></i> Sair</a>
-                        </li> -->
                         <li><a href="#"><i class="fa fa-lock"></i> Bloqueio de tela</a></li>
                         <li><a href="Login.html"><i class="fa fa-key"></i> Sair</a></li>
 
@@ -119,29 +116,19 @@
                 <a href="#/home"><i class="fa fa-fw fa-home"></i> Home </a>
             </li>
             <li>
-                <a href="#/parceiros"><i class="fa fa-fw fa-user"></i>  Parceiros </a>
+                <a ui-sref="app.parceiros.lista"><i class="fa fa-fw fa-user"></i>  Parceiros </a>
             </li>
             <li>
                 <a href="#/pedidos"><i class="fa fa-fw fa-table"></i> Pedidos </a>
             </li>
             <li>
                 <a href="#/noticias"><i class="fa fa-fw fa-newspaper-o"></i> Notícias </a>
-            </li>
-           <!-- <li>
-                <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Nome do menu</a>
-            </li>
-            <li>
-                <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Nome do menu </a>
-            </li>-->
+            </li>           
         </ul>
     </div>
-<!-- /.navbar-collapse -->
 
   </div>
 </nav>
-<!--<style type="text/css">
-
-</style>-->
 
 
 <div ui-view="content" class="main-content"></div>
