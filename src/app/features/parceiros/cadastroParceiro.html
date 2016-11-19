@@ -17,34 +17,31 @@
               <div class="panel-body">
 
                 <div class="row">
-                    <div class="col-lg-6">                
+                    <div class="col-lg-6">
+                        
+                        <form role="form" name="form1">
+                            <div class="form-group">
+                                <label for="name"><span class="fa fa-user"></span> Nome</label>
+                                <input type="text" class="form-control" id="name" placeholder="Entre com nome">
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><span class="fa fa-envelope"></span> E-mail</label>
+                                <input type="text" class="form-control" id="email" placeholder="Entre com email">                                    
 
-                        <div class="modal-body" >
-                            <form role="form" name="form1">
-                                <div class="form-group">
-                                    <label for="name"><span class="glyphicon glyphicon-user"></span> Nome</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Entre com nome">
-                                </div>
-                                <div class="form-group">
-                                     <label for="email"><span class="fa fa-envelope"></span> E-mail</label>
-                                    <input type="text" class="form-control" id="email" placeholder="Entre com email">                                    
-
-                                </div>
-                                <div class="form-group">
-                                     <label for="telefone"><span class="fa fa-phone"></span> Telefone </label>
-                                    <input type="text" name="tel" onKeyPress="MascaraTelefone(tel);" placeholder="Entre com o telefone" maxlength="14" class="form-control" onBlur="ValidaTelefone(tel);">
-                                </div>
-                                <div class="form-group">
-                                     <label for="cnpj"><span class="glyphicon glyphicon-user"></span> CNPJ </label>
-                                    <input type="text" name="cnpj" onKeyPress="MascaraCNPJ(cnpj);" placeholder="Entre com o CNPJ" maxlength="18" class="form-control"  onBlur="ValidarCNPJ(cnpj);">
-                                </div>
-                                <div class="form-group">
-                                    <label for="cep"><span class="fa fa-map-marker"></span> CEP</label>
-                                    <input type="text" name="cep" id="cep" onKeyPress="MascaraCep(cep);" placeholder="Entre com o CEP" maxlength="10" class="form-control"  onBlur="ValidaCep(cep)">
-                                </div>
-                                 
-                            </form>
-                        </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefone"><span class="fa fa-phone"></span> Telefone </label>
+                                <input type="text" name="tel" onKeyPress="MascaraTelefone(tel);" placeholder="Entre com o telefone" maxlength="14" class="form-control" onBlur="ValidaTelefone(tel);">
+                            </div>
+                            <div class="form-group">
+                                <label for="cnpj"><span><i class="fa fa-id-card" aria-hidden="true"></i></span> CNPJ </label>
+                                <input type="text" name="cnpj" onKeyPress="MascaraCNPJ(cnpj);" placeholder="Entre com o CNPJ" maxlength="18" class="form-control"  onBlur="ValidarCNPJ(cnpj);">
+                            </div>
+                            <div class="form-group">
+                                <label for="cep"><span class="fa fa-map-marker"></span> CEP</label>
+                                <input type="text" name="cep" id="cep" onKeyPress="MascaraCep(cep);" placeholder="Entre com o CEP" maxlength="10" class="form-control"  onBlur="ValidaCep(cep)">
+                            </div>
+                        </form>
 
                      </div> 
 
@@ -84,7 +81,7 @@
                      </div> 
                 </div>
                  <a href="parceiros.html" style="color:#fff;" class="btn btn-success btn-block">
-                    <span class="glyphicon glyphicon-off"></span>  Cadastrar
+                    <span class="fa fa-off"></span>  Cadastrar
                 </a> 
               </div>
             </div>
