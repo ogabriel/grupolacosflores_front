@@ -41,7 +41,7 @@
         views: {
           'content':{
             template: '<div ui-view>',
-            controller: ''
+            controller: 'parceirosController'
           }
         },
         abstract: true

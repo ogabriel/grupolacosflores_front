@@ -39,7 +39,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="cep"><span class="fa fa-map-marker"></span> CEP</label>
-                                <input type="text" name="cep" id="cep" onKeyPress="MascaraCep(cep);" placeholder="Entre com o CEP" maxlength="10" class="form-control"  onBlur="ValidaCep(cep)">
+                                <input type="text" name="cep" id="cep" ng-change="consultaCEP(endereco.cep)" placeholder="Entre com o CEP" maxlength="9" class="form-control" ng-model="endereco.cep"/>
                             </div>
                         </form>
 
@@ -51,19 +51,19 @@
                             <form role="form">
                                 <div class="form-group">
                                     <label for="estado"><span class="fa fa-map-marker"></span> Estado</label>
-                                    <input type="text" class="form-control" id="estado" placeholder="Entre com estado">
+                                    <input type="text" class="form-control" id="estado" placeholder="Entre com estado" ng-model="endereco.uf">
                                 </div>
                                  <div class="form-group">
                                     <label for="cidade"><span class="fa fa-map-marker"></span> Cidade</label>
-                                    <input type="text" class="form-control" id="cidade" placeholder="Entre com estado">
+                                    <input type="text" class="form-control" id="cidade" placeholder="Entre com estado" ng-model="endereco.localidade">
                                 </div>
                                  <div class="form-group">
                                     <label for="bairro"><span class="fa fa-map-marker"></span> Bairro</label>
-                                    <input type="text" class="form-control" id="bairro" placeholder="Entre com estado">
+                                    <input type="text" class="form-control" id="bairro" placeholder="Entre com estado" ng-model="endereco.bairro">
                                 </div>
                                 <div class="form-group">
                                      <label for="endereco"><span class="fa fa-map-marker"></span> Endereço </label>
-                                    <input type="text" class="form-control" id="endereco" id="email" placeholder="Entre com endereço">
+                                    <input type="text" class="form-control" id="endereco" id="email" placeholder="Entre com endereço" ng-model="endereco.logradouro">
                                 </div>
                                 <div class="form-group">
                                     <label for="numero"><span class="fa fa-map-marker"></span> Número</label>
