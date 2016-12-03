@@ -9,14 +9,31 @@
 }
 
 .main-content{
-    margin-left: 18%;
-    width: 70%;
-    padding-top: 7%;
+    margin-left: 14%;
+    padding-top: 6%;
+    //width: 70%;
+   
 }
+
+@media only screen and (max-width : 320px) {
+  .nav_especial{
+  margin-left: 68%;
+  margin-top: -5%;
+  }
+
+  .main-content{
+    margin-top: 57%;   
+	}
+
+}
+
+
 
 @media(min-width: 970px){
 
 }
 
+
+// col-xs- celular	.col-sm- tablets	.col-md- desktops	.col-lg- desktops grandes
 // injector
 // endinjector
