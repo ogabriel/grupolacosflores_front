@@ -39,7 +39,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="cep"><span class="fa fa-map-marker"></span> CEP</label>
-                                <input type="text" name="cep" id="cep" ng-change="consultaCEP(floricultura.endereco.cep)" placeholder="Entre com o CEP" maxlength="9" class="form-control" ng-model="floricultura.endereco.cep"/>
+                                <input type="text" ui-br-cep-mask name="cep" id="cep" ng-change="consultaCEP(floricultura.endereco.cep)" placeholder="Entre com o CEP" maxlength="9" class="form-control" ng-model="floricultura.endereco.cep"/>
                             </div>
                         </form>
 

@@ -1,94 +1,36 @@
     <div class="container todo_container">
         
         <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">Noticias (p/ parceira)    </h1>                       
-                    </div>
-                </div>
+            <div class="col-lg-12">
+                <h1 class="page-header">Noticias </h1>                       
+            </div>
+        </div>
         <!-- /.row -->
 
         <ol class="breadcrumb">
             <li>
-                <i class="fa fa fa-tasks"></i> <a href="noticia_cadastrar.html" style="color:#000;">
+                <i class="fa fa fa-tasks"></i> <a ui-sref="app.noticias.cadastro" style="color:#000;">
                     Clique aqui para cadastrar uma nova noticia</a>
             </li>                            
         </ol>
 
-         <!-- Blog Post Row -->
-        <div class="row">
-            <div class="col-md-1 text-center">
-                <p><i class="fa fa-file-text fa-4x"></i>
-                </p>
-                <p>June 17, 2014</p>
-            </div>
-            <div class="col-md-5">
-                <a href="blog-post.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/500x200" alt="">
-                </a>
-            </div>
-            <div class="col-md-4">
-                <h3><a href="blog-post.html">Blog Post Title</a>
-                </h3>
-                <p>by <a href="#">Start Bootstrap</a>
-                </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <a class="btn btn-primary" href="blog-post.html">Read More <i class="fa fa-angle-right"></i></a>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-        
-         <!-- Blog Post Row -->
-        <div class="row">
-            <div class="col-md-1 text-center">
-                <p><i class="fa fa-file-text fa-4x"></i>
-                </p>
-                <p>June 17, 2014</p>
-            </div>
-            <div class="col-md-5">
-                <a href="blog-post.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/500x200" alt="">
-                </a>
-            </div>
-            <div class="col-md-4">
-                <h3><a href="blog-post.html">Blog Post Title</a>
-                </h3>
-                <p>by <a href="#">Start Bootstrap</a>
-                </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <a class="btn btn-primary" href="blog-post.html">Read More <i class="fa fa-angle-right"></i></a>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Blog Post Row -->
-        <div class="row">
-            <div class="col-md-1 text-center">
-                <p><i class="fa fa-file-text fa-4x"></i>
-                </p>
-                <p>June 17, 2014</p>
-            </div>
-            <div class="col-md-5">
-                <a href="blog-post.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/500x200" alt="">
-                </a>
-            </div>
-            <div class="col-md-4">
-                <h3><a href="blog-post.html">Blog Post Title</a>
-                </h3>
-                <p>by <a href="#">Start Bootstrap</a>
-                </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <a class="btn btn-primary" href="blog-post.html">Read More <i class="fa fa-angle-right"></i></a>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <hr>
+         <div class="row">
+             <div class="col-lg-12">
+                 <div ng-repeat="noticia in noticias" class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="panel panel-default text-center">
+                            <div class="panel-heading">
+                                <h3 ng-bind="noticia.titulo"></h3>
+                            </div>
+                            <div class="panel-body">
+                                <p ng-bind="noticia.conteudo"></p>
+                            </div>
+                        </div>
+                    </div>
+		        </div>
+             </div>
+         </div>	
+   
 
        
     </div>

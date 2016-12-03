@@ -57,16 +57,31 @@
         templateUrl: 'app/features/parceiros/cadastroParceiro.html'
       })
 
+      
+
       .state('app.noticias',{
         url: '/noticias',
         views: {
           'content':{
-            templateUrl:'app/features/noticias/mainNoticias.html',
-            controller: ''
+            template: '<div ui-view>',
+            controller: 'noticiasController'
           }
-        }
-      });
+        },
+        abstract: true
+      })
 
+      .state('app.noticias.lista',{
+        url: '',        
+        templateUrl:'app/features/noticias/mainNoticias.html',
+      })
+
+      .state('app.noticias.cadastro', {
+        url: '/cadastroNoticias',
+        templateUrl: 'app/features/noticias/noticia_cadastrar.html'
+      })
+
+
+     
     $urlRouterProvider.otherwise('/home');
   }
 
