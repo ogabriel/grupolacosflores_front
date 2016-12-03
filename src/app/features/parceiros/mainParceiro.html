@@ -29,20 +29,28 @@
 								<table class="table table-hover table-striped">
 										<thead>
 												<tr>
-														<th>Nome</th>
-														<th>Visitantes</th>
-														<th> Nº de pedidos</th>
-														<th>Finalizados</th>
+														<th> id</th>
+														<th> Razão Social </th>
+														<th> Nome Fantasia </th>
+														<th> Cep </th>
+														<th> Logradouro </th>
+														<th> Número </th>
+														<th> Complemento </th>
+														<th> Bairro</th>
 												</tr>
 										</thead>
 										<tbody>
-												<tr>
-														<td>Parceira Glória</td>
-														<td>1265</td>
-														<td>32.3%</td>
-														<td>321</td>
-												</tr>
-												
+												<tr ng-repeat="parceiross in parceiro">
+														<td ng-bind="parceiross.id"></td>
+														<td ng-bind="parceiross.razaoSocial"></td>
+														<td ng-bind="parceiross.nomeFantasia"></td>
+														<td ng-bind="parceiross.cnpj"></td>
+														<td ng-bind="parceiross.cep"></td>
+														<td ng-bind="parceiross.logradouro"></td>
+														<td ng-bind="parceiross.numero"></td>
+														<td ng-bind="parceiross.complemento"></td>
+														<td ng-bind="parceiross.bairro"></td>														
+    											</tr>												
 										</tbody>
 								</table>
 						</div>

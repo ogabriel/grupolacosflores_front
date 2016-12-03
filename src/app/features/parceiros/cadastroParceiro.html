@@ -19,27 +19,23 @@
                 <div class="row">
                     <div class="col-lg-6">
                         
-                        <form role="form" name="form1">
+                        <form role="form" name="form1" id="formParceiro" ng-submit="salvarParceiro()">
                             <div class="form-group">
-                                <label for="name"><span class="fa fa-user"></span> Nome</label>
-                                <input type="text" class="form-control" id="name" placeholder="Entre com nome">
+                                <label for="name"><span class="fa fa-user"></span> Razão Social</label>
+                                <input ng-model="formParceiro.razaoSocial" type="text" class="form-control" id="name" placeholder="Entre com razão social">
                             </div>
                             <div class="form-group">
-                                <label for="email"><span class="fa fa-envelope"></span> E-mail</label>
-                                <input type="text" class="form-control" id="email" placeholder="Entre com email">
+                                <label for="email"><span class="fa fa-envelope"></span> Nome fantasia</label>
+                                <input ng-model="formParceiro.nomeFantasia" type="text" class="form-control" id="email" placeholder="Entre com nome fantasia">
 
                             </div>
-                            <div class="form-group">
-                                <label for="telefone"><span class="fa fa-phone"></span> Telefone </label>
-                                <input type="text" name="tel"  placeholder="Entre com o telefone" maxlength="14" class="form-control">
-                            </div>
-                            <div class="form-group">
+                           <div class="form-group">
                                 <label for="cnpj"><span><i class="fa fa-id-card" aria-hidden="true"></i></span> CNPJ </label>
-                                <input type="text" name="cnpj"  placeholder="Entre com o CNPJ" maxlength="18" class="form-control" ng-model="endereco.cnpj" value="{{endereco.cnpj | cnpj}}">
+                                <input ng-model="formParceiro.cnpj" type="text" name="cnpj"  placeholder="Entre com o CNPJ" maxlength="18" class="form-control" ng-model="endereco.cnpj" value="{{endereco.cnpj | cnpj}}">
                             </div>
                             <div class="form-group">
                                 <label for="cep"><span class="fa fa-map-marker"></span> CEP</label>
-                                <input type="text" ui-br-cep-mask name="cep" id="cep" ng-change="consultaCEP(floricultura.endereco.cep)" placeholder="Entre com o CEP" maxlength="9" class="form-control" ng-model="floricultura.endereco.cep"/>
+                                <input ng-model="formParceiro.cep" type="text" ui-br-cep-mask name="cep" id="cep" ng-change="consultaCEP(floricultura.endereco.cep)" placeholder="Entre com o CEP" maxlength="9" class="form-control" ng-model="floricultura.endereco.cep"/>
                             </div>
                         </form>
 
@@ -49,29 +45,26 @@
 
                         <div class="modal-body" >
                             <form role="form">
-                                <div class="form-group">
-                                    <label for="estado"><span class="fa fa-map-marker"></span> Estado</label>
-                                    <input type="text" class="form-control" id="estado" placeholder="Entre com estado" ng-model="endereco.uf">
-                                </div>
+                               
                                  <div class="form-group">
                                     <label for="cidade"><span class="fa fa-map-marker"></span> Cidade</label>
-                                    <input type="text" class="form-control" id="cidade" placeholder="Entre com estado" ng-model="endereco.localidade">
+                                    <input ng-model="formParceiro.cidade" type="text" class="form-control" id="cidade" placeholder="Entre com estado" ng-model="endereco.localidade">
                                 </div>
                                  <div class="form-group">
                                     <label for="bairro"><span class="fa fa-map-marker"></span> Bairro</label>
-                                    <input type="text" class="form-control" id="bairro" placeholder="Entre com estado" ng-model="endereco.bairro">
+                                    <input ng-model="formParceiro.bairro" type="text" class="form-control" id="bairro" placeholder="Entre com bairro" ng-model="endereco.bairro">
                                 </div>
                                 <div class="form-group">
                                      <label for="endereco"><span class="fa fa-map-marker"></span> Endereço </label>
-                                    <input type="text" class="form-control" id="endereco" id="email" placeholder="Entre com endereço" ng-model="endereco.logradouro">
+                                    <input ng-model="formParceiro.logradouro" type="text" class="form-control" id="endereco" id="email" placeholder="Entre com endereço" ng-model="endereco.logradouro">
                                 </div>
                                 <div class="form-group">
                                     <label for="numero"><span class="fa fa-map-marker"></span> Número</label>
-                                    <input type="text" class="form-control" id="psw" placeholder="Entre com o número">
+                                    <input ng-model="formParceiro.numero" type="text" class="form-control" id="psw" placeholder="Entre com o número">
                                 </div> 
                                 <div class="form-group">
                                     <label for="complemento"><span class="fa fa-map-marker"></span> Complemento</label>
-                                    <input type="text" class="form-control" id="psw" placeholder="Entre com o complemento">
+                                    <input ng-model="formParceiro.complemento" type="text" class="form-control" id="psw" placeholder="Entre com o complemento">
                                 </div> 
 
 
@@ -80,9 +73,9 @@
 
                      </div> 
                 </div>
-                 <a href="parceiros.html" style="color:#fff;" class="btn btn-success btn-block">
+                 <button type="submit" style="color:#fff;" class="btn btn-success btn-block">
                     <span class="fa fa-off"></span>  Cadastrar
-                </a> 
+                 </button> 
               </div>
             </div>
           </div>   
