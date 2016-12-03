@@ -72,7 +72,7 @@ angular.module('grupoLacosFloresFront').controller('parceirosController', functi
 
             return $http({
                 method: 'POST',
-                url: '',
+                url: 'http://localhost:8080/grupolacosflores_WEB-novo/floricultura',
                 data: parceiross
             });
         },
@@ -80,7 +80,7 @@ angular.module('grupoLacosFloresFront').controller('parceirosController', functi
         listarParceiro: function(){
             return $http({
                 method: 'GET',
-                url: ''
+                url: 'http://localhost:8080/grupolacosflores_WEB-novo/floricultura'
             })
         }
     } 
