@@ -1,7 +1,12 @@
 angular.module('grupoLacosFloresFront').controller('parceirosController', function($scope, parceirosService){
   $scope.testaMensagem = 'eita XD';
-  $scope.endereco = {};
-  $scope.endereco.cep = "";
+  $scope.floricultura = {
+    nome: "",
+    email: "",
+    cnpj: "",
+    endereco: {}
+  };
+  $scope.floricultura.endereco.cep = "";
 
   $scope.consultaCEP = function(cep){
     if( cep.length < 8 )
@@ -9,14 +14,12 @@ angular.module('grupoLacosFloresFront').controller('parceirosController', functi
 
     parceirosService.consultaCEP(cep).
       then(function(retorno){
-        $scope.endereco = retorno.data;
+        $scope.floricultura.endereco = retorno.data;
     }).catch(function(){
         alert(retorno.message || "Houve um erro desconhecido");
         return;
     });
   };
-
-
 })
 
 .service('parceirosService', function($http){
