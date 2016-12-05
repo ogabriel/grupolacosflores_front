@@ -25,15 +25,31 @@
         }
       })
 
-      .state('app.pedidos', {
+      
+      .state('app.pedidos',{
         url: '/pedidos',
         views: {
-          'content': {
-            templateUrl: 'app/features/pedidos/mainPedido.html',
-            controller: 'PedidosController',
-            controllerAs: 'pedido'
+          'content':{
+            template: '<div ui-view>',
+            controller: 'PedidosController'
           }
-        }
+        },
+        abstract: true
+      })
+
+      .state('app.pedidos.lista', {
+        url: '',
+        templateUrl: 'app/features/pedidos/mainPedido.html'
+      })
+
+      .state('app.pedidos.cadastro', {
+        url: '/cadastro',
+        templateUrl: 'app/features/pedidos/cadastro_Pedidos.html'
+      })
+
+      .state('app.pedidos.cadastroEntregadores', {
+        url: '/cadastroEntregadores',
+        templateUrl: 'app/features/pedidos/cadastro_Entregadores.html'
       })
 
       .state('app.parceiros',{
