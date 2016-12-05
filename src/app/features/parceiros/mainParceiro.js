@@ -10,7 +10,7 @@ angular.module('grupoLacosFloresFront').controller('parceirosController', functi
     logradouro: '',
     numero: '',
     complemento: '',
-    bairro: '',
+    bairro: ''
     /* endereco: {} */
   };
 
