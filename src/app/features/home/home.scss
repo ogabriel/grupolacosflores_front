@@ -1,5 +1,12 @@
 .todo_container{
-	width:880px;
+	width:100%;
+}
+
+.ng-scope{
+	.row {
+    	margin-left: -15px;
+    	margin-right: 0px !important;
+	}
 }
 
 // injector
