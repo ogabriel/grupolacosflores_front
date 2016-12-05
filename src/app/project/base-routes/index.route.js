@@ -52,6 +52,12 @@
         templateUrl: 'app/features/pedidos/cadastro_Entregadores.html'
       })
 
+      .state('app.pedidos.cadastroItens', {
+        url: '/cadastroItens',
+        templateUrl: 'app/features/pedidos/cadastro_Itens.html'
+      })
+     
+
       .state('app.parceiros',{
         url: '/parceiros',
         views: {
