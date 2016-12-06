@@ -1,6 +1,7 @@
 angular.module('grupoLacosFloresFront').controller('noticiasController', function($scope, noticiasService){
-
+    console.log('Fora')
     $scope.formNoticia = {
+        
         titulo: '',
         conteudo: ''
     };
@@ -19,7 +20,7 @@ angular.module('grupoLacosFloresFront').controller('noticiasController', functio
     $scope.listarNoticias();
 
     $scope.salvarNoticia = function(){
-        
+        console.log('Salvar Noticia')
         var noticia = JSON.stringify($scope.formNoticia);
 
         noticiasService.cadastrarNoticia(noticia).then(function(retorno){
@@ -37,7 +38,7 @@ angular.module('grupoLacosFloresFront').controller('noticiasController', functio
 
             return $http({
                 method: 'POST',
-                url: 'http://localhost:8080/grupolacosflores_WEB-novo/noticias',
+                url: 'http://localhost:9080/grupolacosflores_WEB-novo/noticias',
                 data: noticia
             });
         },
@@ -45,7 +46,7 @@ angular.module('grupoLacosFloresFront').controller('noticiasController', functio
         listarNoticias: function(){
             return $http({
                 method: 'GET',
-                url: 'http://localhost:8080/grupolacosflores_WEB-novo/noticias'
+                url: 'http://localhost:9080/grupolacosflores_WEB-novo/noticias'
             })
         }
     } 
