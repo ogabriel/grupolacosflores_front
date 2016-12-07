@@ -37,7 +37,7 @@ angular.module('grupoLacosFloresFront').controller('parceirosController', functi
 
     $scope.listarParceiro();
 
-    $scope.salvarParceiro = function(){
+    $scope.salvarParceiro = function(floricultura){
         
         var floricultura = JSON.stringify($scope.floricultura);
 
