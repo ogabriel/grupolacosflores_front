@@ -107,9 +107,10 @@
                         <h3 class="panel-title"><i class="fa fa-bar-chart-o fa-fw"></i> Gráfico de Vendas</h3>
                     </div>
                     <div class="panel-body">
-                        <div>
-                            <canvas id="lineChart" width="500" height="300"></canvas>   <div id="lineLegend"></div>
-                        </div>                            
+                        <div ng-controller="MyController">
+                            <fusioncharts width="600" height="400" type="column2d" datasource="{{myDataSource}}">  </fusioncharts>
+                        </div>
+                         
                     </div>
                 </div>
             </div>
@@ -129,6 +130,10 @@
     </div>
     <!-- fim grafico -->
 
+        
+
+
+</div>
      
 
 </div>

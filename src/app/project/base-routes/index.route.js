@@ -102,7 +102,7 @@
         templateUrl: 'app/features/noticias/noticia_cadastrar.html'
       })
 
-
+      
      
     $urlRouterProvider.otherwise('/home');
   }
