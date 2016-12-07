@@ -14,12 +14,13 @@
           <div class="panel panel-default">
             
             <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+			
               <div class="panel-body">
-
+<form role="form" name="form1" id="formParceiro" ng-submit="salvarParceiro()">
                 <div class="row">
                     <div class="col-lg-6">
                         
-                        <form role="form" name="form1" id="formParceiro" ng-submit="salvarParceiro()">
+                        
                             <div class="form-group">
                                 <label for="name"><span class="fa fa-user"></span> Razão Social</label>
                                 <input ng-model="formParceiro.razaoSocial" type="text" class="form-control" id="name" placeholder="Entre com razão social">
@@ -37,15 +38,11 @@
                                 <label for="cep"><span class="fa fa-map-marker"></span> CEP</label>
                                 <input ng-model="formParceiro.cep" type="text" ui-br-cep-mask name="cep" id="cep" ng-change="consultaCEP(floricultura.endereco.cep)" placeholder="Entre com o CEP" maxlength="9" class="form-control" ng-model="floricultura.endereco.cep"/>
                             </div>
-                        </form>
 
                      </div> 
 
                      <div class="col-lg-6">                  
 
-                        <div class="modal-body" >
-                            <form role="form">
-                               
                                  <div class="form-group">
                                     <label for="cidade"><span class="fa fa-map-marker"></span> Cidade</label>
                                     <input ng-model="formParceiro.cidade" type="text" class="form-control" id="cidade" placeholder="Entre com estado" ng-model="endereco.localidade">
@@ -68,14 +65,14 @@
                                 </div> 
 
 
-                            </form>
-                        </div>
+                            
 
                      </div> 
                 </div>
                  <button type="submit" style="color:#fff;" class="btn btn-success btn-block">
                     <span class="fa fa-off"></span>  Cadastrar
                  </button> 
+				</form> 
               </div>
               
             </div>
