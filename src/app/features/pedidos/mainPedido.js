@@ -1,31 +1,27 @@
 
-angular.module('grupoLacosFloresFront').controller('PedidosController', function($scope, PedidosService){
+angular.module('grupoLacosFloresFront').controller('PedidosController', function($scope, $http){
   
 
-  $scope.testaMensagem = 'eita XD';
+ $scope.formItem = {
+        nome: '',  
+        descricao: '',
+        valorUnitario: ''
+    };
 
+    console.log($scope.formItem);
 
-
-  var promise = PedidosService.getQuestions();
-  promise.then(function(retorno){
-    console.log('sucesso!', retorno);
+     $scope.salvarItem = function(){
+       
+       $http({
+       method: 'POST',
+       url: 'http://127.0.0.1:9080/grupolacosflores_WEB-novo/item',
+       data: JSON.stringify($scope.formItem),
+       headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json', 
+     }});
+   }
   })
-  .catch(function(){
-    console.log('falhou');
-  });
-
-
-})
-
-.service('PedidosService', function($http){
-  return{
-    //funções para chamada de endpoint
-    salvarItem: function(){
-      return $http({
-        //vai indo
-      })
-    }
-  };
-});
+       
 
 
