@@ -1,8 +1,8 @@
 
 angular.module('grupoLacosFloresFront').controller('PedidosController', function($scope, PedidosService){
-  var ctrl = this;
+  
 
-  ctrl.testaMensagem = 'eita XD';
+  $scope.testaMensagem = 'eita XD';
 
 
 
@@ -14,19 +14,16 @@ angular.module('grupoLacosFloresFront').controller('PedidosController', function
     console.log('falhou');
   });
 
-  return this;
+
 })
 
 .service('PedidosService', function($http){
   return{
-    getQuestions: function(){
+    //funções para chamada de endpoint
+    salvarItem: function(){
       return $http({
-        method: 'POST',
-        url: 'http://polls.apiblueprint.org/questions',
-        data: {
-          xpto: 'eitaa'
-        }
-      });
+        //vai indo
+      })
     }
   };
 });
