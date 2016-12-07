@@ -2,7 +2,6 @@ angular.module('grupoLacosFloresFront').controller('parceirosController', functi
   $scope.testaMensagem = 'eita XD';
   
   $scope.floricultura = {
-    id: '',
     razaoSocial: '',
     nomeFantasia: '',
     cnpj: '',
@@ -11,12 +10,7 @@ angular.module('grupoLacosFloresFront').controller('parceirosController', functi
     numero: '',
     complemento: '',
     bairro: ''
-    /* endereco: {} */
   };
-
-  $scope.parceiro = [];
-
-  /* $scope.floricultura.endereco.cep = "";
 
   $scope.consultaCEP = function(cep){
     if( cep.length < 8 )
@@ -24,23 +18,13 @@ angular.module('grupoLacosFloresFront').controller('parceirosController', functi
 
     parceirosService.consultaCEP(cep).
       then(function(retorno){
-        $scope.floricultura.endereco = retorno.data;
+        $scope.floricultura = retorno.data;
     }).catch(function(){
         alert(retorno.message || "Houve um erro desconhecido");
         return;
     });
   };
-})
 
-.service('parceirosService', function($http){
-  return{
-    consultaCEP: function(cep){
-      return $http({
-        method:'GET',
-        url: 'http://viacep.com.br/ws/'+cep+'/json/'
-      });
-    }
-  } */
 
 
     $scope.listarParceiro = function(){
@@ -55,9 +39,9 @@ angular.module('grupoLacosFloresFront').controller('parceirosController', functi
 
     $scope.salvarParceiro = function(){
         
-        var parceiross = JSON.stringify($scope.formParceiro);
+        var floricultura = JSON.stringify($scope.floricultura);
 
-        parceirosService.cadastrarParceiro(parceiross).then(function(retorno){
+        parceirosService.cadastrarParceiro(floricultura).then(function(retorno){
             console.log('DEU BOM')
         }).catch({
 
@@ -67,13 +51,20 @@ angular.module('grupoLacosFloresFront').controller('parceirosController', functi
 })
 .service('parceirosService', function($http){
     return{
-        cadastrarParceiro: function(parceiross){
 
+        consultaCEP: function(cep){
+            return $http({
+                method:'GET',
+                url: 'http://viacep.com.br/ws/'+cep+'/json/'
+            });
+        },
+
+        cadastrarParceiro: function(floricultura){
 
             return $http({
                 method: 'POST',
                 url: 'http://localhost:9080/grupolacosflores_WEB-novo/floricultura',
-                data: parceiross
+                data: floricultura
             });
         },
 
@@ -84,5 +75,4 @@ angular.module('grupoLacosFloresFront').controller('parceirosController', functi
             })
         }
     } 
-})
-;
+});

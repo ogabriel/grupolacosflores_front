@@ -23,20 +23,20 @@
                         
                             <div class="form-group">
                                 <label for="name"><span class="fa fa-user"></span> Razão Social</label>
-                                <input ng-model="formParceiro.razaoSocial" type="text" class="form-control" id="name" placeholder="Entre com razão social">
+                                <input ng-model="floricultura.razaoSocial" type="text" class="form-control" id="name" placeholder="Entre com razão social">
                             </div>
                             <div class="form-group">
                                 <label for="email"><span class="fa fa-envelope"></span> Nome fantasia</label>
-                                <input ng-model="formParceiro.nomeFantasia" type="text" class="form-control" id="email" placeholder="Entre com nome fantasia">
+                                <input ng-model="floricultura.nomeFantasia" type="text" class="form-control" id="email" placeholder="Entre com nome fantasia">
 
                             </div>
                            <div class="form-group">
                                 <label for="cnpj"><span><i class="fa fa-id-card" aria-hidden="true"></i></span> CNPJ </label>
-                                <input ng-model="formParceiro.cnpj" type="text" name="cnpj"  placeholder="Entre com o CNPJ" maxlength="18" class="form-control" ng-model="endereco.cnpj" value="{{endereco.cnpj | cnpj}}">
+                                <input ng-model="floricultura.cnpj" type="text" name="cnpj"  placeholder="Entre com o CNPJ" maxlength="18" class="form-control" ng-model="endereco.cnpj" value="{{endereco.cnpj | cnpj}}">
                             </div>
                             <div class="form-group">
                                 <label for="cep"><span class="fa fa-map-marker"></span> CEP</label>
-                                <input ng-model="formParceiro.cep" type="text" ui-br-cep-mask name="cep" id="cep" ng-change="consultaCEP(floricultura.endereco.cep)" placeholder="Entre com o CEP" maxlength="9" class="form-control" ng-model="floricultura.endereco.cep"/>
+                                <input ng-model="floricultura.cep" type="text" name="cep" id="cep" ng-change="consultaCEP(floricultura.cep)" placeholder="Entre com o CEP" maxlength="9" class="form-control" ng-model="floricultura.endereco.cep"/>
                             </div>
 
                      </div> 
@@ -45,23 +45,23 @@
 
                                  <div class="form-group">
                                     <label for="cidade"><span class="fa fa-map-marker"></span> Cidade</label>
-                                    <input ng-model="formParceiro.cidade" type="text" class="form-control" id="cidade" placeholder="Entre com estado" ng-model="endereco.localidade">
+                                    <input ng-model="floricultura.cidade" type="text" class="form-control" id="cidade" placeholder="Entre com estado" ng-model="endereco.localidade">
                                 </div>
                                  <div class="form-group">
                                     <label for="bairro"><span class="fa fa-map-marker"></span> Bairro</label>
-                                    <input ng-model="formParceiro.bairro" type="text" class="form-control" id="bairro" placeholder="Entre com bairro" ng-model="endereco.bairro">
+                                    <input ng-model="floricultura.bairro" type="text" class="form-control" id="bairro" placeholder="Entre com bairro" ng-model="endereco.bairro">
                                 </div>
                                 <div class="form-group">
                                      <label for="endereco"><span class="fa fa-map-marker"></span> Endereço </label>
-                                    <input ng-model="formParceiro.logradouro" type="text" class="form-control" id="endereco" id="email" placeholder="Entre com endereço" ng-model="endereco.logradouro">
+                                    <input ng-model="floricultura.logradouro" type="text" class="form-control" id="endereco" id="email" placeholder="Entre com endereço" ng-model="endereco.logradouro">
                                 </div>
                                 <div class="form-group">
                                     <label for="numero"><span class="fa fa-map-marker"></span> Número</label>
-                                    <input ng-model="formParceiro.numero" type="text" class="form-control" id="psw" placeholder="Entre com o número">
+                                    <input ng-model="floricultura.numero" type="text" class="form-control" id="psw" placeholder="Entre com o número">
                                 </div> 
                                 <div class="form-group">
                                     <label for="complemento"><span class="fa fa-map-marker"></span> Complemento</label>
-                                    <input ng-model="formParceiro.complemento" type="text" class="form-control" id="psw" placeholder="Entre com o complemento">
+                                    <input ng-model="floricultura.complemento" type="text" class="form-control" id="psw" placeholder="Entre com o complemento">
                                 </div> 
 
 
