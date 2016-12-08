@@ -44,7 +44,8 @@
 
       .state('app.pedidos.cadastro', {
         url: '/cadastro',
-        templateUrl: 'app/features/pedidos/cadastro_Pedidos.html'
+        templateUrl: 'app/features/pedidos/cadastro_Pedidos.html',
+        controller: 'pedidoCadastroCtrl'
       })
 
       .state('app.pedidos.cadastroEntregadores', {

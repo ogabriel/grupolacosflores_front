@@ -19,56 +19,57 @@
                 <div class="row">
                     <div class="col-lg-12">
                         
-                        <form id="formPedido" ng-submit="salvarPedido()">
+                        <form id="Pedido" ng-submit="salvarPedido(Pedido)">
                             <div class="form-body pal">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <div class="input-icon right">   
-                                                <label for="name"><span class="fa fa-cart-plus"></span> Número do pedido</label>                                
-                                                <input id="inputName" type="text" placeholder="Nº Pedido" class="form-control" ng-model="formPedido.nPedido"/></div>
+                                                <label for="name"><span class="fa fa-cart-plus"></span> Número do pedido</label>
+                                                <input id="inputName" type="text" placeholder="Nº Pedido" class="form-control" ng-model="Pedido.numero"/>
+                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="input-icon right">
                                                 <label for="name"><span class="fa fa-calendar"></span> Data</label>  
-                                               <input id="inputName" type="text" placeholder="Data do pedido" class="form-control" ng-model="formPedido.dataPedido"/></div>
+                                               <input id="inputName" type="text" placeholder="Data do pedido" class="form-control" ng-model="Pedido.pedidoData"/></div>
                                         </div>
                                         <div class="form-group">
                                             <div class="input-icon right">
                                                 <label for="name"><span class="fa fa-sliders"></span> Status</label>  
-                                                <input id="inputName" type="text" placeholder="Status" class="form-control" ng-model="formPedido.statusPedido"/></div>
+                                                <input id="inputName" type="text" placeholder="Status" class="form-control" ng-model="Pedido.status"/></div>
                                         </div>
                                         <div class="form-group">
                                             <div class="input-icon right">
                                                 <label for="name"><span class="fa fa-sort-amount-asc"></span> Quantidade</label>  
-                                                <input id="inputName" type="text" placeholder="Quantidade" class="form-control" ng-model="formPedido.statusPedido"/></div>
+                                                <input id="inputName" type="text" placeholder="Quantidade" class="form-control" ng-model="Pedido.quantidade"/></div>
                                         </div>
                                         <div class="form-group">
                                             <div class="input-icon right">
                                                 <label for="name"><span class="fa fa-money"></span> Valor total</label>  
-                                                <input id="inputName" type="text" placeholder="Valor Total" class="form-control" ng-model="formPedido.statusPedido"/></div>
+                                                <input id="inputName" type="text" placeholder="Valor Total" class="form-control" ng-model="Pedido.valorTotal"/></div>
                                         </div>
                                         <div class="form-group mbn">
                                              <label for="name"><span class="fa fa-sticky-note-o"></span> Observação</label> 
-                                            <textarea rows="5" placeholder="Observação" class="form-control" ng-model="formNoticia.conteudo"></textarea></div>
+                                            <textarea rows="5" placeholder="Observação" class="form-control" ng-model="Pedido.observacao"></textarea></div>
 
-                                        
                                     </div>    
                                 </div>
                                     
                                 </div>                                
                              
                                 
-                            </div>
-                        </form>
+                                <button type="submit" style="color:#fff;" class="btn btn-success btn-block">
+                                    <span class="fa fa-off"></span>  Cadastrar
+                                </button> 
+                            </form>
+                        </div>
 
                      </div> 
 
                      
                 </div>
-                 <button type="submit" style="color:#fff;" class="btn btn-success btn-block">
-                    <span class="fa fa-off"></span>  Cadastrar
-                 </button> 
+                 
               </div>
               
             </div>

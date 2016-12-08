@@ -4,7 +4,8 @@
   angular
     .module('grupoLacosFloresFront', ['ngResource', 'ui.router', 'ui.bootstrap', 'toastr']);
 
-    angular
-      .module("myApp", ["ng-fusioncharts"]);
+
+    // modulo para os graficos
+    //'ng-fusioncharts'
 
 })();

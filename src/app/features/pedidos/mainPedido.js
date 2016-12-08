@@ -8,7 +8,6 @@ angular.module('grupoLacosFloresFront').controller('PedidosController', function
         valorUnitario: ''
     };
 
-    console.log($scope.formItem);
 
      $scope.salvarItem = function(){
        
