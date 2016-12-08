@@ -9,41 +9,40 @@ angular.module('grupoLacosFloresFront').controller('pedidoCadastroCtrl', functio
     valorTotal: ''
   }
 
-
-  $scope.salvarPedido = function(Pedido){
-    
-    var params = JSON.stringify($scope.Pedido);
-
-
-
-    //Exemplo de uso de cookie
-    // $cookies.put('id', params);
-    // var id =  JSON.parse($cookies.get('id')); 
-
-
-    PedidosService.cadastrarPedido(params).then(function(retorno){
-      var numeroPedido = retorno.data.floriculturaID;
-
-      numeroPedido = JSON.stringify(numeroPedido);
-
-      $cookies.put('id', numeroPedido);
-       var id =  JSON.parse($cookies.get('id')); 
-
-    }).catch(function(retorno){
-
-    })
+  $scope.Floricultura = {
+    floricultura_id: ''
   }
 
+
+$scope.salvarPedido = function(){
+       
+        $http({
+        method: 'POST',
+        url: 'http://127.0.0.1:9080/grupolacosflores_WEB-novo/item',
+        data: JSON.stringify($scope.formItem),
+        headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json', 
+      }}).then(function(){
+        //tratar retorno aqui
+      });
+    };
+
+    $scope.salvarPedido = function(){
+       
+        $http({
+        method: 'POST',
+        url: 'http://127.0.0.1:9080/grupolacosflores_WEB-novo/1/pedido',
+        data: JSON.stringify($scope.Pedido),
+        headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json', 
+      }}).then(function(){
+        //tratar retorno aqui
+      });
+    };
+
+ 
+
 })
 
-.service('PedidosService', function(){
-  return{
-    cadastrarPedido: function(params){
-      return $http({
-        method: 'POST',
-        url: '',
-        data: params
-      })
-    }
-  };
-})

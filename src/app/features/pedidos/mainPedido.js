@@ -3,6 +3,15 @@ angular.module('grupoLacosFloresFront').controller('PedidosController', function
 
   $scope.Pedidos = [];
 
+  $scope.p = {
+    numero : '',
+    pedidoData:'',
+    status:'',
+    observacao:'',
+    quantidade:'',
+    valorTotal:''
+  }
+
  $scope.formItem = {
         nome: '',  
         descricao: '',
@@ -38,20 +47,20 @@ angular.module('grupoLacosFloresFront').controller('PedidosController', function
     };
 
     $scope.listarPedidos = function(){
-
-      //isso aqui temq mudar. 
-      //Tem que pegar id da floriculuta dinamicamente
-      var idFloricultura = 1;
-
-
       $http({
         method: 'GET',
-        url: ''+idFloricultura
+        url: ' http://127.0.0.1:9080/grupolacosflores_WEB-novo/pedido/1'
       }).then(function(retorno){
-        $scope.Pedidos = retorno.data
-      });
+        console.log(retorno.data);
+        $scope.p = retorno;
 
+      });
+       
     }
+
+    $scope.listarPedidos();
+
+   
 });
 
 

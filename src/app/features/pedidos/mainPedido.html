@@ -44,13 +44,13 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr class="success" ng-repeat="pedido in Pedidos">
-								<td ng-bind="pedido.numero" ng-click="exibirDetalhes(pedido.numero)"> 15 </td>
-								<td > 09/12/2016 </td>
-								<td ng-bind="pedido.status"> Finalizado </td>
-								<td> 1 </td>
-								<td> R$ 550,00 </td>
-								<td> Entregador João Pinheiro </td>
+							<tr class="success" ng-repeat="pedido in p">
+								<td ng-bind="pedido.numero" ng-click="exibirDetalhes(pedido.numero)"></td>
+								<td ng-bind="pedido.pedidoData"></td>
+								<td ng-bind="pedido.status"></td>
+								<td ng-bind="pedido.quantidade"></td>
+								<td ng-bind="pedido.valorTotal"></td>
+								<td ng-bind="pedido.observacao"></td>
 							</tr>
 						</tbody>
 					</table>
