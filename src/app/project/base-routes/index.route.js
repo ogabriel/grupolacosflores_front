@@ -42,6 +42,12 @@
         templateUrl: 'app/features/pedidos/mainPedido.html'
       })
 
+      // .state('app.pedidos.editar', {
+      //   url: '/Detalhes',
+      //   templateUrl: 'app/features/pedidos/pedido_Editar.html',
+      //   controller: 'PedidoEditarCtrl'
+      // })
+
       .state('app.pedidos.cadastro', {
         url: '/cadastro',
         templateUrl: 'app/features/pedidos/cadastro_Pedidos.html',

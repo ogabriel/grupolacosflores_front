@@ -44,32 +44,14 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr class="success">
-								<td> 15 </td>
-								<td> 09/12/2016 </td>
-								<td> Finalizado </td>
+							<tr class="success" ng-repeat="pedido in Pedidos">
+								<td ng-bind="pedido.numero" ng-click="exibirDetalhes(pedido.numero)"> 15 </td>
+								<td > 09/12/2016 </td>
+								<td ng-bind="pedido.status"> Finalizado </td>
 								<td> 1 </td>
 								<td> R$ 550,00 </td>
 								<td> Entregador João Pinheiro </td>
 							</tr>
-							<tr class="active">
-								<td> 20 </td>
-								<td> 07/12/2016 </td>
-								<td> Aguardando pagamento </td>
-								<td> 1 </td>
-								<td> R$ 25,00 </td>
-								<td> - </td>
-							</tr>
-							<tr class="warning">
-								<td> 26 </td>
-								<td> 10/12/2016 </td>
-								<td> Aguardando nota fiscal </td>
-								<td> 2 </td>
-								<td> R$ 225,00 </td>
-								<td> Entregador Dennis Freschi </td>
-							</tr>
-							
-					
 						</tbody>
 					</table>
 				</div>
