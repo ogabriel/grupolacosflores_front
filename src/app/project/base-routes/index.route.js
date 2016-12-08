@@ -25,7 +25,7 @@
         }
       })
 
-      
+            
       .state('app.pedidos',{
         url: '/pedidos',
         views: {
