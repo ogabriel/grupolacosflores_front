@@ -1,5 +1,8 @@
-angular.module('grupoLacosFloresFront').controller('PedidosController', function($scope, $http, $location){
-  
+angular.module('grupoLacosFloresFront').controller('PedidosController', function($scope, $http, $location,$rootScope){
+   var idMetodo = ""
+  if($rootScope.idFloricultura != undefined){
+    var idMetodo = $rootScope.idFloricultura;
+  } 
 
   $scope.Pedidos = [];
 
@@ -49,7 +52,7 @@ angular.module('grupoLacosFloresFront').controller('PedidosController', function
     $scope.listarPedidos = function(){
       $http({
         method: 'GET',
-        url: ' http://127.0.0.1:9080/grupolacosflores_WEB-novo/pedido'
+        url: ' http://127.0.0.1:9080/grupolacosflores_WEB-novo/'+idMetodo+'/pedido'
       }).then(function(retorno){
         console.log(retorno.data);
         $scope.p = retorno.data;

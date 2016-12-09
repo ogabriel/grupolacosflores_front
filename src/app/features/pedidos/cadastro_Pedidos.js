@@ -1,4 +1,4 @@
-angular.module('grupoLacosFloresFront').controller('pedidoCadastroCtrl', function($scope, $http, $cookies){
+angular.module('grupoLacosFloresFront').controller('pedidoCadastroCtrl', function($scope, $http, $cookies,$rootScope){
 
   $scope.Pedido = {
     numero: '',
@@ -17,12 +17,13 @@ angular.module('grupoLacosFloresFront').controller('pedidoCadastroCtrl', functio
 $scope.salvarPedido = function(){
         $http({
         method: 'POST',
-        url: 'http://127.0.0.1:9080/grupolacosflores_WEB-novo/item',
+        url: 'http://127.0.0.1:9080/grupolacosflores_WEB-novo/'+$rootScope.idFloricultura+'/pedido',
         data: JSON.stringify($scope.formItem),
         headers: {
               'Content-Type': 'application/json',
               'Accept': 'application/json', 
       }}).then(function(){
+        
         //tratar retorno aqui
       });
     };

@@ -1,6 +1,7 @@
-angular.module('grupoLacosFloresFront').controller('noticiasController', function($scope, noticiasService,$http){
+angular.module('grupoLacosFloresFront').controller('noticiasController', function($scope, noticiasService,$http,$location,$rootScope){
     
-    
+    $scope.id = $rootScope.idFloricultura;
+
     $scope.formNoticia = {
         titulo: '',
         conteudo: ''
@@ -30,8 +31,6 @@ angular.module('grupoLacosFloresFront').controller('noticiasController', functio
     $scope.listarNoticias = function(){
         noticiasService.listarNoticias().then(function(retorno){
             $scope.noticias = retorno.data
-        }).catch(function(){
-            console.log('deu ruim');
         })
     }
 
@@ -43,6 +42,8 @@ angular.module('grupoLacosFloresFront').controller('noticiasController', functio
 
         noticiasService.cadastrarNoticia(noticia).then(function(retorno){
             console.log('DEU BOM')
+
+
         }).catch({
 
         });
@@ -56,7 +57,10 @@ angular.module('grupoLacosFloresFront').controller('noticiasController', functio
                 method: 'POST',
                 url: 'http://localhost:9080/grupolacosflores_WEB-novo/noticias',
                 data: noticia
-            });
+            }).then(function(retorno){
+                $location.path("/noticias");
+
+            });;
         },
 
         listarNoticias: function(){

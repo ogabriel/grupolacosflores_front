@@ -1,6 +1,7 @@
-angular.module('grupoLacosFloresFront').controller('parceirosController', function($scope, parceirosService){
-  $scope.testaMensagem = 'eita XD';
-  
+angular.module('grupoLacosFloresFront').controller('parceirosController', function($scope,parceirosService,$rootScope,$location){
+
+  $scope.id = $rootScope.idFloricultura;
+
   $scope.floricultura = {
     razaoSocial: '',
     nomeFantasia: '',
@@ -11,6 +12,7 @@ angular.module('grupoLacosFloresFront').controller('parceirosController', functi
     complemento: '',
     bairro: ''
   };
+  console.log($rootScope.idFloricultura);
 
   $scope.consultaCEP = function(cep){
     if( cep.length < 8 )
@@ -42,6 +44,7 @@ angular.module('grupoLacosFloresFront').controller('parceirosController', functi
         var floricultura = JSON.stringify($scope.floricultura);
 
         parceirosService.cadastrarParceiro(floricultura).then(function(retorno){
+            $location.path("/parceiros");
             console.log('DEU BOM')
         }).catch({
 

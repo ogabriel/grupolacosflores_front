@@ -2,12 +2,13 @@ angular.module('grupoLacosFloresFront').controller('LoginCtrl', function($scope,
 
   $scope.formLogin = {
       email: '',
-      senha: ''
+      senha: '',
   }
 
    $scope.loginUsuario= function(){
        
        var data = JSON.stringify($scope.formLogin);
+       console.log(data);
         $http({
             method: 'POST',
             url: 'http://localhost:9080/grupolacosflores_WEB-novo/login',
@@ -15,7 +16,20 @@ angular.module('grupoLacosFloresFront').controller('LoginCtrl', function($scope,
         }).then(function(retorno){
           console.log(retorno.status);
             if(retorno.status == 200){
-              $location.path("/home");
+                console.log(retorno.data);
+                if(retorno.data > 1)
+                {
+                    $rootScope.idFloricultura = retorno.data;
+                    console.log($rootScope.idFloricultura);
+
+                } else {
+                    $rootScope.idFloricultura = undefined;
+                    console.log($rootScope.idFloricultura);
+                    
+                }
+                $location.path("/home");
+
+                
             };
 
         })

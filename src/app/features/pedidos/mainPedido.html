@@ -19,13 +19,7 @@
 					<li class="active">
 						<i class="fa fa-edit"></i>  <a ui-sref="app.pedidos.cadastro"  style="color:#000;">Deseja cadastrar um novo pedido?</a>
 					</li>                           
-				</ol>
-				<ol class="breadcrumb">
-					<li class="active">
-						<i class="fa fa-edit"></i>  <a ui-sref="app.pedidos.cadastroItens"  style="color:#000;">Deseja cadastrar um novo item?</a>
-					</li>                           
-				</ol>
-					
+				</ol>	
 			</div>
 		</div>	
 
@@ -38,7 +32,6 @@
 								<th>Nº Pedido</th>
 								<th>Data do pedido</th>
 								<th>Status</th>
-								<th>Quantidade</th>
 								<th>Valor Total</th>
 								<th>Observação</th>
 							</tr>
@@ -48,8 +41,7 @@
 								<td ng-bind="pedido.numero"></td>
 								<td ng-bind="pedido.pedidoData"></td>
 								<td ng-bind="pedido.status"></td>
-								<td ng-bind="pedido.quantidade"></td>
-								<td ng-bind="pedido.valorTotal"></td>
+								<td>R$: {{pedido.valorTotal}},00</td>
 								<td ng-bind="pedido.observacao"></td>
 							</tr>
 						</tbody>
@@ -64,19 +56,7 @@
 		
 			<!-- /.row -->
 		<div class="row">
-			<div class="col-lg-12">
-				<h2 class="page-header"> Entregadores</h2>
-			</div>
-			<div class="row">
-			<div class="col-lg-12">
-				<ol class="breadcrumb">
-					<li class="active">
-						<i class="fa fa-edit"></i>  <a ui-sref="app.pedidos.cadastroEntregadores"  style="color:#000;">Deseja cadastrar um novo dispositivo?</a>
-					</li>                           
-				</ol>
-					
-			</div>
-		</div>
+			
 			<div class="col-md-4 col-sm-6">
 				<div class="panel panel-default text-center">
 					<div class="panel-heading">
