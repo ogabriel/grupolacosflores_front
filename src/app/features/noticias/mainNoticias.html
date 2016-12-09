@@ -14,53 +14,23 @@
             </li>                            
         </ol>
 
-         <div class="row">
-             <div class="col-lg-12">
-                 <div ng-repeat="noticia in noticias" class="row">
-                    <div class="col-md-4 col-sm-6">
-                        <div class="panel panel-default text-center">
-                            <div class="panel-heading">
-                                <h3 ng-bind="noticia.titulo"></h3>
-                                <button class="fa fa-trash-o trashh cor_vermelha more_familias botao_top" ng-click="excluirNoticia(noticia)"></button> <br>
-                                <button class="fa fa-pencil cor_verde more_familias botao_top_1" ng-click="editarNoticia(noticia)"></button> 
-                            </div>
-                            <div class="panel-body">
-                                <p ng-bind="noticia.conteudo"></p>
-                            </div>
+        <div class="row">           
+            <div class="col-lg-12">
+                <div ng-repeat="noticia in noticias" class="col-md-4 col-sm-6">
+                    <div class="panel panel-default text-center">
+                        <div class="panel-heading">
+                            <h3 ng-bind="noticia.titulo"></h3>
+                            <button class="fa fa-trash-o trashh cor_vermelha more_familias botao_top" ng-click="excluirNoticia(noticia)"></button> <br>
+                            <button class="fa fa-pencil cor_verde more_familias botao_top_1" ng-click="editarNoticia(noticia)"></button> 
+                        </div>
+                        <div class="panel-body">
+                            <p ng-bind="noticia.conteudo"></p>
                         </div>
                     </div>
-		        </div>
-             </div>
-         </div>	
+                </div>
+		   </div>             
+         </div>	   
          
 
-         <div class="row">
-             <div class="col-lg-12">
-                 <div class="row">
-                    <div class="col-md-4 col-sm-6">
-                        <div class="panel panel-default text-center">
-                            <div class="panel-heading">
-                                <h3>Titulo</h3>
-                                <div class="pega_icones">
-                                    <button class="fa fa-trash-o trashh cor_vermelha more_familias botao_top" ng-click="excluirNoticia(noticia)"></button> <br>
-                                    <button class="fa fa-pencil cor_verde more_familias botao_top_1" ng-click="editarNoticia(noticia)"></button> 
-                                </div>
-                            </div>
-                            <div class="panel-body">
-                                <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut saepe obcaecati ipsum blanditiis, optio quia nisi, quo sapiente ab omnis placeat. Iusto nihil, provident at ad saepe veritatis! Blanditiis, quia?
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                   
-		        </div>
-             </div>
-         </div>	
-         
-   
-
-       
-    </div>
+ </div>
     <!-- /.container -->
