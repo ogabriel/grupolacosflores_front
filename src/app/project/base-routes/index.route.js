@@ -108,10 +108,21 @@
         url: '/cadastroNoticias',
         templateUrl: 'app/features/noticias/noticia_cadastrar.html'
       })
+      
+
+      .state('app.login', {
+        url: '/login',
+        views: {
+          'content': {
+            templateUrl: 'app/features/login/mainLogin.html',
+            controller: 'LoginCtrl',
+          }
+        }
+      })
 
       
      
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/login');
   }
 
 })();
