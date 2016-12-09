@@ -1,4 +1,4 @@
-angular.module('grupoLacosFloresFront').controller('pedidoCadastroCtrl', function($scope, $http, PedidosService, $cookies){
+angular.module('grupoLacosFloresFront').controller('pedidoCadastroCtrl', function($scope, $http, $cookies){
 
   $scope.Pedido = {
     numero: '',

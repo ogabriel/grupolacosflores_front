@@ -7,14 +7,14 @@
           <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
         </div>
         <div class="modal-body" style="padding:40px 50px;">
-          <form role="form">
+          <form role="form" ng-submit="loginUsuario()">
             <div class="form-group">
               <label for="usrname"><span class="glyphicon glyphicon-user"></span> Usuário</label>
-              <input type="text" class="form-control" id="usrname" placeholder="Entre com email">
+              <input type="text" class="form-control" id="usrname" ng-model="formLogin.email" placeholder="Entre com email">
             </div>
             <div class="form-group">
               <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Senha</label>
-              <input type="text" class="form-control" id="psw" placeholder="Entre com a senha">
+              <input type="password" class="form-control" id="psw" ng-model="formLogin.senha" placeholder="Entre com a senha">
             </div>
             <div class="checkbox">
               <label><input type="checkbox" value="" checked>Lembrar conta</label>
@@ -23,7 +23,6 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancelar </button>
           
           <p>Esqueceu <a href="#">a senha?</a></p>
         </div>
