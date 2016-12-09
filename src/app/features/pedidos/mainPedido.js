@@ -49,10 +49,10 @@ angular.module('grupoLacosFloresFront').controller('PedidosController', function
     $scope.listarPedidos = function(){
       $http({
         method: 'GET',
-        url: ' http://127.0.0.1:9080/grupolacosflores_WEB-novo/pedido/1'
+        url: ' http://127.0.0.1:9080/grupolacosflores_WEB-novo/pedido'
       }).then(function(retorno){
         console.log(retorno.data);
-        $scope.p = retorno;
+        $scope.p = retorno.data;
 
       });
        

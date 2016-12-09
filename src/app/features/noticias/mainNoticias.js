@@ -1,4 +1,4 @@
-angular.module('grupoLacosFloresFront').controller('noticiasController', function($scope, noticiasService){
+angular.module('grupoLacosFloresFront').controller('noticiasController', function($scope, noticiasService,$http){
     
     
     $scope.formNoticia = {
@@ -38,17 +38,9 @@ angular.module('grupoLacosFloresFront').controller('noticiasController', functio
     $scope.listarNoticias();
 
     $scope.salvarNoticia = function(){
+        
         var noticia = JSON.stringify($scope.formNoticia);
 
-        $http({
-            method: 'POST',
-            url: 'http://localhost:9080/grupolacosflores_WEB-novo/noticias',
-            data: noticia
-        }).then(function(){
-
-        })
-
-        
         noticiasService.cadastrarNoticia(noticia).then(function(retorno){
             console.log('DEU BOM')
         }).catch({

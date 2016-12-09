@@ -62,6 +62,7 @@
       .state('app.pedidos.cadastroItens', {
         url: '/cadastroItens',
         templateUrl: 'app/features/pedidos/cadastro_Itens.html'
+        
       })
      
 

@@ -15,7 +15,6 @@ angular.module('grupoLacosFloresFront').controller('pedidoCadastroCtrl', functio
 
 
 $scope.salvarPedido = function(){
-       
         $http({
         method: 'POST',
         url: 'http://127.0.0.1:9080/grupolacosflores_WEB-novo/item',
@@ -27,22 +26,6 @@ $scope.salvarPedido = function(){
         //tratar retorno aqui
       });
     };
-
-    $scope.salvarPedido = function(){
-       
-        $http({
-        method: 'POST',
-        url: 'http://127.0.0.1:9080/grupolacosflores_WEB-novo/1/pedido',
-        data: JSON.stringify($scope.Pedido),
-        headers: {
-              'Content-Type': 'application/json',
-              'Accept': 'application/json', 
-      }}).then(function(){
-        //tratar retorno aqui
-      });
-    };
-
- 
 
 })
 
