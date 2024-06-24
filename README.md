@@ -28,4 +28,4 @@ Partes do projeto
 -----------
 
 * **Aplicação Back-end:** [CLIQUE AQUI](https://github.com/gabrieloliver98/grupolacosflores_WEB)
-* **Aplicativo Mobile(Android)**  [CLIQUE AQUI](https://github.com/gabrieloliver98/grupolacosflores_mobile)
+* **Aplicativo Mobile Android:**  [CLIQUE AQUI](https://github.com/gabrieloliver98/grupolacosflores_mobile)
